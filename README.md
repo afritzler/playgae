@@ -3,9 +3,13 @@ playgae
 
 Running Play! Framework (1.2.5) on the Google App Engine
 
-= Changelog =
+Getting Started
+---------------
 
-Version 1.0
+Changelog
+---------
+
+_Version 1.0_
 
 * Application skeleton generated with version 1.2.5 of the Play! Framework
 * Siena modul version 2.0.6
