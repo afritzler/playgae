@@ -43,8 +43,11 @@ Getting Started
 6. Add to conf/application.conf
 
       # —- Google app engine module —- 
+      
       module.gae=${play.path}/modules/gae-1.6.0 
+      
       # —- Siena module —- 
+      
       module.siena=${play.path}/modules/siena-2.0.6
 
 7. Now you should be able to run your application on your local development environment
