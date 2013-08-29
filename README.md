@@ -34,8 +34,9 @@ Getting Started
       play install siena
 
 5. Edit /YOURAPP/conf/dependencies.yml
+      
+      require:
 
-      require: 
           – play 
           – play -> gae 1.6.0
           – play -> siena 2.0.6
