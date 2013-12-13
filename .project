@@ -5,7 +5,18 @@
 	<projects>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.playframework.playclipse.playNature</nature>
 	</natures>
+	<linkedResources><link><name>siena-2.0.6</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/siena-2.0.6/app</location></link>
+<link><name>conf/siena-2.0.6</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/siena-2.0.6/conf</location></link>
+<link><name>gae-1.6.0</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/gae-1.6.0/app</location></link>
+</linkedResources>
 </projectDescription>
