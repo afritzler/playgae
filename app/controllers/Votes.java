@@ -1,11 +1,14 @@
 package controllers;
 
+import models.Vote;
+import play.db.Model;
 import play.mvc.Controller;
+import play.mvc.With;
 
-public class Votes extends Controller {
+import controllers.CRUD.For;
 
-	public static void vote(String choiceId) {
-		render();
-	}
+@For(Vote.class)
+public class Votes extends CRUD {
+
 	
 }

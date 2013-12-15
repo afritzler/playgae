@@ -15,8 +15,14 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.playframework.playclipse.playNature</nature>
 	</natures>
-	<linkedResources><link><name>siena-2.0.6</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/siena-2.0.6/app</location></link>
-<link><name>conf/siena-2.0.6</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/siena-2.0.6/conf</location></link>
+	<linkedResources><link><name>crudsiena-2.0.3</name><type>2</type><location>/Users/andreasfritzler/git/playgae/modules/crudsiena-2.0.3/app</location></link>
+<link><name>conf/crudsiena-2.0.3</name><type>2</type><location>/Users/andreasfritzler/git/playgae/modules/crudsiena-2.0.3/conf</location></link>
+<link><name>public/crudsiena-2.0.3</name><type>2</type><location>/Users/andreasfritzler/git/playgae/modules/crudsiena-2.0.3/public</location></link>
+<link><name>secure</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/secure/app</location></link>
+<link><name>conf/secure</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/secure/conf</location></link>
+<link><name>public/secure</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/secure/public</location></link>
+<link><name>siena-2.0.7</name><type>2</type><location>/Users/andreasfritzler/git/playgae/modules/siena-2.0.7/app</location></link>
+<link><name>conf/siena-2.0.7</name><type>2</type><location>/Users/andreasfritzler/git/playgae/modules/siena-2.0.7/conf</location></link>
 <link><name>gae-1.6.0</name><type>2</type><location>/Users/andreasfritzler/Development/play-1.2.5/modules/gae-1.6.0/app</location></link>
 </linkedResources>
 </projectDescription>

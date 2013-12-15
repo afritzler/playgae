@@ -19,160 +19,60 @@
 	<div class="jumbotron">
 	  <h1>Spurwechsel</h1>
 	  <p class="lead">Vote vote vote today!!!</p>
+	  <p>
+	  	<a href="http://facebook.com/spurwechsel" target="blank"><i class="fa fa-facebook"></i> Like us on Facebook</a>
+	  	<a href="http://twitter.com/thespurwechsel" target="blank"><i class="fa fa-twitter"></i> Follow us on Twitter</a>
+	  </p>
 	</div>
 
 	<!-- main voting area -->
 	<div class="row">
 	
-		<div class="col-md-2">
-		    <a href="#" class="thumbnail" data-djId="dj-details-1">
-		      <img src="/public/images/sw-logo.png" alt="something about this picture">
-		    </a>
-		</div>
+		#{if contestants}
 		
-		<div class="col-md-2">
-		    <a href="#" class="thumbnail" data-djId="dj-details-2">
-		      <img src="/public/images/sw-logo.png" alt="something about this picture">
-		    </a>
-		</div>
-	
-		<div class="col-md-2">
-		    <a href="#" class="thumbnail" data-djId="dj-details-3">
-		      <img data-djid="dj-details-3" src="/public/images/sw-logo.png" alt="something about this picture">
-		    </a>
-		</div>
-	
-		<div class="col-md-2">
-		    <a href="#" class="thumbnail" data-djId="dj-details-4">
-		      <img data-djid="dj-details-4" src="/public/images/sw-logo.png" alt="something about this picture">
-		    </a>
-		</div>
-	
-		<div class="col-md-2">
-		    <a href="#" class="thumbnail" data-djId="dj-details-5">
-		      <img data-djid="dj-details-5" src="/public/images/sw-logo.png" alt="something about this picture">
-		    </a>
-		</div>
+			#{list items:contestants, as:'contestant'}
+				<div class="col-md-2">
+				    <a href="#" class="thumbnail" data-djId="dj-details-${contestant.id}">
+				      <img src="/public/images/sw-logo.png" alt="${contestant.description}">
+				    </a>
+				</div>
+			#{/list}
 		
-		<div class="col-md-2">
-		    <a href="#" class="thumbnail" data-djId="dj-details-6">
-		      <img data-djid="dj-details-6" src="/public/images/sw-logo.png" alt="something about this picture">
-		    </a>
-		</div>
+		#{/if}
+		#{else}
+			<p>No contestants found.</p>
+		#{/else}	
 	
 	</div>
 		
-	<!-- artist details -->
-    <div id="dj-details-1" class="row dj-details">
-		<div class="col-md-12">
-			<h3>DJ Name</h3>
-			<p>Something meaningful ... Lorem ipsum dolor sit amet, eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<div class="text-center">
-			<iframe width="600" height="100" src="//www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FTechnoLiveSets%2Fdubfire-live-timewarp-2012-mannheim-germany-31-03-2012%2F&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=33e62a3a-a551-4d25-ad83-ce4870f22a86&hide_tracklist=1&hide_cover=1&autoplay=" frameborder="0"></iframe>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-			  	<button type="button" class="btn btn-primary">
-					Bring'em in!
-				</button>
-			</div>
-		</div>
-    </div>
- 
-    <div id="dj-details-2" class="row dj-details">
-		<div class="col-md-12">
-			<h3>DJ Name 2</h3>
-			<p>Something meaningful ... Lorem ipsum dolor sit amet, eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<div class="text-center">
-			<iframe width="600" height="100" src="//www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FTechnoLiveSets%2Fdubfire-live-timewarp-2012-mannheim-germany-31-03-2012%2F&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=33e62a3a-a551-4d25-ad83-ce4870f22a86&hide_tracklist=1&hide_cover=1&autoplay=" frameborder="0"></iframe>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-			  	<button type="button" class="btn btn-primary">
-					Bring'em in!
-				</button>
-			</div>
-		</div>
-    </div>
- 
-     <div id="dj-details-3" class="row dj-details">
-		<div class="col-md-12">
-			<h3>DJ Name 3</h3>
-			<p>Something meaningful ... Lorem ipsum dolor sit amet, eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<div class="text-center">
-			<iframe width="600" height="100" src="//www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FTechnoLiveSets%2Fdubfire-live-timewarp-2012-mannheim-germany-31-03-2012%2F&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=33e62a3a-a551-4d25-ad83-ce4870f22a86&hide_tracklist=1&hide_cover=1&autoplay=" frameborder="0"></iframe>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-			  	<button type="button" class="btn btn-primary">
-					Bring'em in!
-				</button>
-			</div>
-		</div>
-    </div>
+	<!-- artist details -->  	
+   	#{if contestants}
+	
+		#{list items:contestants, as:'contestant'}
+		    <div id="dj-details-${contestant.id}" class="row dj-details">    
+				<div class="col-md-12">
+					<h3>${contestant.name}</h3>
+					<p>${contestant.description}</p>
+					<div class="text-center">
+						${contestant.contentHTML?.raw()}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+					  	<button type="button" class="btn btn-primary">
+							Bring'em in!
+						</button>
+					</div>
+				</div>
+		    </div>
+		#{/list}
+	
+	#{/if}
     
-    <div id="dj-details-4" class="row dj-details">
-		<div class="col-md-12">
-			<h3>DJ Name 4</h3>
-			<p>Something meaningful ... Lorem ipsum dolor sit amet, eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<div class="text-center">
-			<iframe width="600" height="100" src="//www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FTechnoLiveSets%2Fdubfire-live-timewarp-2012-mannheim-germany-31-03-2012%2F&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=33e62a3a-a551-4d25-ad83-ce4870f22a86&hide_tracklist=1&hide_cover=1&autoplay=" frameborder="0"></iframe>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-			  	<button type="button" class="btn btn-primary">
-					Bring'em in!
-				</button>
-			</div>
-		</div>
-    </div>
-    
-    <div id="dj-details-5" class="row dj-details">
-		<div class="col-md-12">
-			<h3>DJ Name 5</h3>
-			<p>Something meaningful ... Lorem ipsum dolor sit amet, eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<div class="text-center">
-			<iframe width="600" height="100" src="//www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FTechnoLiveSets%2Fdubfire-live-timewarp-2012-mannheim-germany-31-03-2012%2F&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=33e62a3a-a551-4d25-ad83-ce4870f22a86&hide_tracklist=1&hide_cover=1&autoplay=" frameborder="0"></iframe>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-			  	<button type="button" class="btn btn-primary">
-					Bring'em in!
-				</button>
-			</div>
-		</div>
-    </div>
- 
-   	<div id="dj-details-6" class="row dj-details">
-		<div class="col-md-12">
-			<h3>DJ Name 6</h3>
-			<p>Something meaningful ... Lorem ipsum dolor sit amet, eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<div class="text-center">
-			<iframe width="600" height="100" src="//www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FTechnoLiveSets%2Fdubfire-live-timewarp-2012-mannheim-germany-31-03-2012%2F&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=33e62a3a-a551-4d25-ad83-ce4870f22a86&hide_tracklist=1&hide_cover=1&autoplay=" frameborder="0"></iframe>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-			  	<button type="button" class="btn btn-primary">
-					Bring'em in!
-				</button>
-			</div>
-		</div>
-    </div>
- 
- 
     <!-- Site footer -->
 	<div class="footer">
-		<div class="col-md-2">
-			<p>&copy; Spurwechsel 2013</p>
-		</div>
 		<div class="col-md-3">
-			<p>Like us on Facebook</p>
+			<p>&copy; Spurwechsel 2013</p>
 		</div>
 	</div>
 
@@ -184,12 +84,17 @@
 	  // initially hide detailed content
 	  $(".dj-details").hide();
 	  
+	  // map click even on images
 	  $(".thumbnail").click(function(){
 	  	var artistId = $(this).data("djid");
 	  	
 	  	// show current artist & hide the rest
 	  	$(".dj-details").hide();
 	  	$("#"+artistId).fadeIn();
+	  
+	  	$(this).find(".btn").click(function(){
+	  		alert("voted");
+	  	});
 	  
 	  });
 	  

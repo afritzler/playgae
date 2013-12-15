@@ -9,8 +9,14 @@ import models.*;
 
 public class Application extends Controller {
 
+	/**
+	 * Get all contestants and render the main page.
+	 */
     public static void index() {
-        render();
+    	
+    	List<Contestant> contestants = Contestant.all(Contestant.class).fetch();
+    	
+        render(contestants);
     }
 
 }
