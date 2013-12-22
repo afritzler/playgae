@@ -16,10 +16,19 @@ public class Vote extends Model {
     @Id(Generator.AUTO_INCREMENT)
     public Long id;
 	
+    /**
+     * Vote timestamp 
+     */
 	public Date timeStamp;
 	
+	/**
+	 * Remember the IP to void double submits
+	 */
 	public String submitterIpAddress;
 	
+	/**
+	 * The actual vote
+	 */
 	public String choice;
 	
 }

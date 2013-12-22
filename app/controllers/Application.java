@@ -7,6 +7,11 @@ import java.util.*;
 
 import models.*;
 
+/**
+ *
+ * Main application controller
+ *
+ */
 public class Application extends Controller {
 
 	/**
