@@ -1,0 +1,119 @@
+#{extends 'main.html' /}
+#{set title:'Contestants Area' /}
+
+<!-- main voting area -->
+<div class="row">
+
+	#{if contestants}
+	
+		#{list items:contestants, as:'contestant'}
+			<div class="col-md-1">
+			    <a href="#" class="thumbnail" data-djId="dj-details-${contestant.id}">
+			      <img src="/public/images/sw-logo.png" alt="${contestant.description}">
+			    </a>
+			</div>
+		#{/list}
+	
+	#{/if}
+	#{else}
+		<p>No contestants found.</p>
+	#{/else}	
+
+</div>
+	
+<!-- artist details -->  	
+  	#{if contestants}
+
+	#{list items:contestants, as:'contestant'}
+		<div id="dj-details-${contestant.id}" class="row dj-details text-center">
+			<div class="col-lg-12">
+				<div class="row text-center">
+					<div class="col-md-1"></div><div class="col-md-4"><h1>${contestant.name}</h1></div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-5" style="margin-left:50px;">${contestant.description}</div>
+				</div>						
+				<div class="row" style="margin:50px;">
+					<div class="col-lg-3"></div>
+					<div class="col-lg-3"><div class="row">
+						<div class="col-md-12 text-center">
+							#{if !hasVoted}
+							  	<button type="button" class="btn btn-primary vote-btn" data-c-id="${contestant.id}">
+									Bring'em in!
+								</button>
+							#{/if}
+							#{else}
+								<button type="button" class="btn btn-default already-btn" data-c-id="${contestant.id}">
+									Already voted!
+								</button>
+							#{/else}
+						</div>
+					</div></div>
+				</div>			
+				<div class="row">
+					<div class="col-md-1"></div><div class="col-md-4">${contestant.contentHTML?.raw()}</div>
+				</div>
+			</div>
+		</div>
+	
+	
+	    <div id="dj-details-${contestant.id}" class="row dj-details">    
+			<div class="col-md-12">
+				<h3>${contestant.name}</h3>
+				<p>${contestant.description}</p>
+				<div class="text-center">
+					${contestant.contentHTML?.raw()}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+				  	<button type="button" class="btn btn-primary">
+						Bring'em in!
+					</button>
+				</div>
+			</div>
+	    </div>
+	#{/list}
+
+#{/if}
+
+<script>
+
+	$(document).ready(function(){
+	  
+	  // initially hide detailed content
+	  $(".dj-details").hide();
+	  
+	  // map click even on images
+	  $(".thumbnail").click(function(){
+	  	var artistId = $(this).data("djid");
+	  	
+	  	// show current artist & hide the rest
+	  	$(".dj-details").hide();
+	  	$("#"+artistId).fadeIn();
+	  
+	    // map button clicks for votes
+		$(".vote-btn").click(function(){
+			var cId = $(this).data("c-id");
+			
+			$.ajax({
+				type: "POST",
+				url: "/votes/vote",
+				data: { choice: cId},
+				success: function() { 
+					// on successful vote redirect to result page
+					window.location.href = "/votes/compactResults";
+					},
+				error: function(errorMessage) {
+                        alert(errorMessage.responseText);
+                    }
+			});
+			
+		});
+	  
+	  });
+
+	  
+	});
+
+</script>

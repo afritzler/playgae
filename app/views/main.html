@@ -7,7 +7,7 @@
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
 		
 		<!-- Bootstrap -->
-    	<link href="@{'/public/stylesheets/bootstrap.min.css'}" rel="stylesheet" media="screen">
+    	<link href="@{'/public/stylesheets/bootstrap.css'}" rel="stylesheet" media="screen">
         
         <!-- Custom styles for this template -->
     	<link href="@{'/public/stylesheets/justified-nav.css'}" rel="stylesheet">
@@ -20,7 +20,17 @@
         #{get 'moreScripts' /}
     </head>
     <body>
-        #{doLayout /}
+    	<div class="container">
+        	#{doLayout /}
+        	
+        	<!-- Site footer -->
+			<div class="footer">
+				<div class="col-md-3">
+					<p>&copy; Spurwechsel 2013-2014</p>
+				</div>
+			</div>
+        	
+		</div> <!-- /container -->
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     	<script src="//code.jquery.com/jquery.js"></script>

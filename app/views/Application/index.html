@@ -1,103 +1,12 @@
 #{extends 'main.html' /}
 #{set title:'Spurwechsel' /}
 
-<div class="container">
-
-<!--       <div class="masthead">
-        <h3 class="text-muted">Project name</h3>
-        <ul class="nav nav-justified">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Downloads</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div> -->
-
-	<!-- Jumbotron -->
-	<div class="jumbotron">
-	  <h1>Spurwechsel</h1>
-	  <p class="lead">Vote vote vote today!!!</p>
-	  <p>
-	  	<a href="http://facebook.com/spurwechsel" target="blank"><i class="fa fa-facebook"></i> Like us on Facebook</a>
-	  	<a href="http://twitter.com/thespurwechsel" target="blank"><i class="fa fa-twitter"></i> Follow us on Twitter</a>
-	  </p>
-	</div>
-
-	<!-- main voting area -->
-	<div class="row">
-	
-		#{if contestants}
-		
-			#{list items:contestants, as:'contestant'}
-				<div class="col-md-2">
-				    <a href="#" class="thumbnail" data-djId="dj-details-${contestant.id}">
-				      <img src="/public/images/sw-logo.png" alt="${contestant.description}">
-				    </a>
-				</div>
-			#{/list}
-		
-		#{/if}
-		#{else}
-			<p>No contestants found.</p>
-		#{/else}	
-	
-	</div>
-		
-	<!-- artist details -->  	
-   	#{if contestants}
-	
-		#{list items:contestants, as:'contestant'}
-		    <div id="dj-details-${contestant.id}" class="row dj-details">    
-				<div class="col-md-12">
-					<h3>${contestant.name}</h3>
-					<p>${contestant.description}</p>
-					<div class="text-center">
-						${contestant.contentHTML?.raw()}
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 text-center">
-					  	<button type="button" class="btn btn-primary">
-							Bring'em in!
-						</button>
-					</div>
-				</div>
-		    </div>
-		#{/list}
-	
-	#{/if}
-    
-    <!-- Site footer -->
-	<div class="footer">
-		<div class="col-md-3">
-			<p>&copy; Spurwechsel 2013</p>
-		</div>
-	</div>
-
-</div> <!-- /container -->
-<script>
-
-	$(document).ready(function(){
-	  
-	  // initially hide detailed content
-	  $(".dj-details").hide();
-	  
-	  // map click even on images
-	  $(".thumbnail").click(function(){
-	  	var artistId = $(this).data("djid");
-	  	
-	  	// show current artist & hide the rest
-	  	$(".dj-details").hide();
-	  	$("#"+artistId).fadeIn();
-	  
-	  	$(this).find(".btn").click(function(){
-	  		alert("voted");
-	  	});
-	  
-	  });
-	  
-	});
-
-</script>
+<!-- Jumbotron -->
+<div class="jumbotron">
+  <h1>Spurwechsel</h1>
+  <p class="lead"><a href="/contestants/listContestants">Vote vote vote today!!!</a></p>
+  <p>
+  	<a href="http://facebook.com/spurwechsel" target="blank"><i class="fa fa-facebook"></i> Like us on Facebook</a>
+  	<a href="http://twitter.com/thespurwechsel" target="blank"><i class="fa fa-twitter"></i> Follow us on Twitter</a>
+  </p>
+</div>

@@ -12,7 +12,7 @@ GET     /favicon.ico                            404
 GET     /public/                                staticDir:public
 
 # Import CRUD routes
-*       /admin           							module:crudsiena
+*       /admin           						module:crudsiena
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
